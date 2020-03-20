@@ -1,0 +1,168 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Raleway', Arial, Helvetica, sans-serif;
+	color: #3E3E3E;
+
+	&__menus {
+		display: flex;
+		justify-content: space-around;
+
+		&__list {
+			list-style: none;
+			padding: 0;
+			color: #AEAEAE;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 2em;
+			cursor: pointer;
+		}
+
+		&__title {
+			font-weight: 500;
+			font-size: 16px;
+			color: #3E3E3E;
+			margin: 20px 0;
+		}
+
+		&__about {
+			position: relative;
+			width: 110px;
+
+			&::after {
+				position: absolute;
+				height: 55px;
+				width: 1px;
+				top: 0;
+				right: 0;
+				content: "";
+				background-color: #E4B56B;
+			}
+		}
+
+		&__services {
+			position: relative;
+
+			&::after {
+				position: absolute;
+				height: 55px;
+				width: 1px;
+				top: 0;
+				right: 0;
+				content: "";
+				background-color: #E4B56B;
+			}
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin: 0 auto;
+		width: 190px;
+
+		&__title {
+			font-weight: 500;
+			font-size: 16px;
+		}
+
+		&__social {
+			display: flex;
+			justify-content: center;
+
+			&_fb {
+				background-image: url('../../assets/images/facebook.svg');
+				height: 21px;
+				width: 21px;
+				margin: .5em;
+				cursor: pointer;
+			}
+
+			&_insta {
+				background-image: url('../../assets/images/instagram.svg');
+				height: 21px;
+				width: 21px;
+				margin: .5em;
+				cursor: pointer;
+			}
+
+			&_youtube {
+				background-image: url('../../assets/images/youtube.svg');
+				height: 21px;
+				width: 21px;
+				margin: .5em;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__developed {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 14px;
+		color: #3E3E3E;
+		margin-bottom: 1em;
+	}
+}
+
+@media (min-width: 767px) {
+	.footer {
+		width: 100%;
+		max-width: 1360px;
+		height: 200px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		&__menus {
+			margin-left: 90px;
+
+			&__title {
+				font-weight: 500;
+				font-size: 18px;
+			}
+
+			&__list {
+				display: flex;
+				flex-direction: column;
+				flex-flow: wrap column;
+				height: 130px;
+			}
+
+			&__about{
+				width: 325px;
+				margin-right: 40px;
+			}
+
+			&__services {
+				width: 460px;
+			}
+		}
+
+		&__contacts {
+			margin: 0;
+			text-align: left;
+			width: 210px;
+			margin-right: 90px;
+
+			&__title {
+				font-weight: 500;
+				font-size: 18px;
+				margin: 20px 0 0 0;
+			}
+
+			&>p {
+				margin: 7px 0;
+			}
+
+			&__social{
+				display: flex;
+				justify-content: start;
+			}
+		}
+
+	}
+}

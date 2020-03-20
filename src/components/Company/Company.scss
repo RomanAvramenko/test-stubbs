@@ -1,0 +1,218 @@
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    position: relative;
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #3E3E3E;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    &::after {
+      position: absolute;
+      height: 2px;
+      width: 60px;
+      bottom: -5px;
+      left: 2.5px;
+      content: "";
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #E4B56B;
+    }
+  }
+
+  &__about {
+    width: 360px;
+    height: 236px;
+    background-image: url('../../assets/images/mobile/company/Company1.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    &__description {
+      position: relative;
+      width: 310px;
+      height: 150px;
+      background-color: rgba(62, 62, 62, 0.9);
+      color: #ffffff;
+      font-family: 'Raleway', Arial, Helvetica, sans-serif;
+      padding: 15px 0 15px 16px;
+      display: flex;
+      flex-direction: column;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        content: '';
+        height: 100px;
+        width: 2px;
+        background-color: #E4B56B;
+      }
+
+      &_title {
+        margin: 0;
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+
+      &_text {
+        width: 261px;
+        margin: 0;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.3em;
+      }
+    }
+  }
+
+  &__prefer {
+    width: 360px;
+    height: 236px;
+    background-image: url('../../assets/images/mobile/company/Company2.png');
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+
+    &__description {
+      position: relative;
+      width: 261px;
+      height: 150px;
+      background-color: rgba(62, 62, 62, 0.9);
+      color: #ffffff;
+      font-family: 'Raleway', Arial, Helvetica, sans-serif;
+      padding: 15px 0 15px 65px;
+      display: flex;
+      flex-direction: column;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        content: '';
+        height: 100px;
+        width: 2px;
+        background-color: #E4B56B;
+      }
+
+      &_title {
+        margin: 0;
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+
+      &_text {
+        width: 261px;
+        margin: 0;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.3em;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .company {
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+
+    &__header {
+      font-weight: 600;
+      font-size: 40px;
+
+      &::after {
+        height: 2px;
+        width: 82px;
+      }
+    }
+
+    &__about {
+      height: 380px;
+      width: 100%;
+      background-image: url('../../assets/images/desktop/company/Company1.png');
+
+      &__description {
+        width: 660px;
+        height: 260px;
+        display: flex;
+        justify-content: center;
+        padding-left: 90px;
+        font-family: 'Raleway', Arial, Helvetica, sans-serif;
+
+        &::after {
+          top: 0;
+          right: 61px;
+          height: 212px;
+          width: 2px;
+        }
+
+        &_title {
+          margin: 0;
+          font-weight: 500;
+          font-size: 40px;
+          margin-bottom: 40px;
+          text-align: left;
+        }
+
+        &_text {
+          width: 545px;
+          margin: 0;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 1.3em;
+        }
+      }
+    }
+
+    &__prefer {
+      height: 380px;
+      width: 100%;
+      background-image: url('../../assets/images/desktop/company/Company2.png');
+
+      &__description {
+        width: 660px;
+        height: 260px;
+        display: flex;
+        justify-content: center;
+        padding-left: 90px;
+        font-family: 'Raleway', Arial, Helvetica, sans-serif;
+
+        &::after {
+          top: 0;
+          left: 61px;
+          height: 212px;
+          width: 2px;
+        }
+
+        &_title {
+          margin: 0;
+          font-weight: 500;
+          font-size: 40px;
+          margin-bottom: 40px;
+          text-align: left;
+        }
+
+        &_text {
+          width: 545px;
+          margin: 0;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 1.3em;
+        }
+      }
+    }
+  }
+}
