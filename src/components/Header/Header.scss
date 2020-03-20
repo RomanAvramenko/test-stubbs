@@ -225,3 +225,18 @@
     }
   }
 }
+
+@media (min-width: 769px) {
+  .header {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1180px;
+    height: 106px;
+
+    &__logo {
+      height: 90px;
+      width: 123px;
+      margin: 5px auto 11px 0;
+    }
+  }
+}

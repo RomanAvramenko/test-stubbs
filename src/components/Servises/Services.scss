@@ -19,7 +19,8 @@
       height: 2px;
       width: 60px;
       bottom: -5px;
-      left: 2.5px;
+      left: 50%;
+      transform: translateX(-50%);
       content: "";
       background-color: #E4B56B;
     }
@@ -37,6 +38,7 @@
       list-style: none;
       cursor: pointer;
       margin: 5px auto;
+      background-size: cover;
 
       &_title {
         position: relative;
@@ -62,19 +64,13 @@
           background-color: #E4B56B;
         }
       }
-
-      &_img {
-        position: absolute;
-        background-size: cover;
-        min-height: 105px;
-        width: 159px;
-      }
     }
   }
 
   &__button {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
     min-width: 328px;
+    max-width: 379px;
     width: 90%;
     height: 36px;
     background-color: #454647;
@@ -82,5 +78,66 @@
     font-size: 14px;
     border: none;
     cursor: pointer;
+  }
+}
+
+@media (min-width: 769px) {
+  .services {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1360px;
+
+    &__header {
+      font-weight: 600;
+      font-size: 40px;
+      margin-bottom: 30px;
+
+      &::after {
+        width: 82px;
+      }
+    }
+
+    &__tile {
+      margin: 0;
+      max-width: 1180px;
+      width: 100%;
+      height: 645px;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &__item {
+        max-height: 202px;
+        max-width: 585px;
+        height: 100%;
+        margin: 5px;
+        display: flex;
+        flex-basis: 382px;
+        flex-grow: 1;
+        flex-shrink: 105px;
+
+        &_title {
+          font-size: 20px;
+          width: 318px;
+          height: 56px;
+          margin-top: 33px;
+          padding: 0;
+          padding-left: 15px;
+
+          &::after {
+            right: 15px;
+            height: 45px;
+            width: 2px;
+          }
+        }
+      }
+    }
+
+    &__button {
+      margin-top: 20px;
+      height: 43px;
+      font-size: 20px;
+    }
   }
 }

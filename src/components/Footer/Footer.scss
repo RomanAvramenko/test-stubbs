@@ -107,7 +107,7 @@
 	}
 }
 
-@media (min-width: 767px) {
+@media (min-width: 769px) {
 	.footer {
 		width: 100%;
 		max-width: 1360px;
@@ -160,7 +160,7 @@
 
 			&__social{
 				display: flex;
-				justify-content: start;
+				justify-content: flex-start;
 			}
 		}
 
