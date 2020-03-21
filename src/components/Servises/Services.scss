@@ -3,6 +3,10 @@
   flex-direction: column;
   align-items: center;
 
+  &__gears {
+    display: none;
+  }
+
   &__header {
     position: relative;
     margin: 20px auto 5px auto;
@@ -28,17 +32,20 @@
 
   &__tile {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 0;
     margin: 10px;
 
     &__item {
       height: 105px;
-      width: 159px;
+      width: 33%;
       list-style: none;
       cursor: pointer;
-      margin: 5px auto;
+      margin: 5px 5px;
       background-size: cover;
+      flex-grow: 1;
+      flex-shrink: 1;
 
       &_title {
         position: relative;
@@ -83,9 +90,62 @@
 
 @media (min-width: 769px) {
   .services {
+    position: relative;
     margin: 0 auto;
     width: 100%;
     max-width: 1360px;
+
+    &__gears {
+      display: block;
+      position: absolute;
+      height: 566px;
+      width: 516px;
+
+      &.left {
+        left: 0;
+        top: 20%;
+        transform: rotate(-45deg);
+      }
+
+      &.right {
+        right: 0;
+        top: 15%;
+        transform: rotate(140deg);
+      }
+
+      & .gear {
+        position: relative;
+
+        &_1 {
+          position: absolute;
+          background-image: url('../../assets/images/desktop/gears/gear1.png');
+          background-size: cover;
+          height: 177px;
+          width: 177px;
+          top: 150px;
+          transform: rotate();
+        }
+
+        &_2 {
+          position: absolute;
+          background-image: url('../../assets/images/desktop/gears/gear2.png');
+          background-size: cover;
+          height: 209px;
+          width: 209px;
+          left: 130px;
+        }
+
+        &_3 {
+          position: absolute;
+          background-image: url('../../assets/images/desktop/gears/gear3.png');
+          background-size: cover;
+          height: 369px;
+          width: 369px;
+          right: 0;
+          top: 200px;
+        }
+      }
+    }
 
     &__header {
       font-weight: 600;
@@ -101,21 +161,22 @@
       margin: 0;
       max-width: 1180px;
       width: 100%;
-      height: 645px;
+      height: 100%;
       display: flex;
+      align-items: stretch;
       justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
+      z-index: 10;
 
       &__item {
-        max-height: 202px;
+        height: 202px;
         max-width: 585px;
-        height: 100%;
         margin: 5px;
         display: flex;
         flex-basis: 382px;
         flex-grow: 1;
-        flex-shrink: 105px;
+        flex-shrink: 1;
 
         &_title {
           font-size: 20px;
@@ -138,6 +199,23 @@
       margin-top: 20px;
       height: 43px;
       font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .services {
+    &__tile {
+      display: flex;
+      align-items: stretch;
+
+      &__item {
+        width: 33%;
+        display: flex;
+        flex-basis: 159px;
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
     }
   }
 }
