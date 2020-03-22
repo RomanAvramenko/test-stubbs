@@ -34,8 +34,12 @@ export const Header = () => {
     </div>
 
   const options = [
-    'ru', 'ua', 'en'
+    { value: '1', className: 'header__lang_ru' },
+    { value: '2', className: 'header__lang_ua' },
+    { value: '3', className: 'header__lang_en' }
   ];
+
+
 
   const langRenderDesk =
     <Dropdown
@@ -46,6 +50,7 @@ export const Header = () => {
       placeholder=""
       value={options[0]}
       menuClassName='dropdown_menu'
+      controlClassName={options[1].className}
     />
 
   return (

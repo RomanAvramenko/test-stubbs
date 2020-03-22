@@ -223,14 +223,23 @@
 
     &_ru {
       background-image: url('../../assets/images/rus.svg');
+      background-size: cover;
+      width: 31px;
+      height: 21px;
     }
 
     &_ua {
       background-image: url('../../assets/images/ua.svg');
+      background-size: cover;
+      width: 31px;
+      height: 21px;
     }
 
     &_en {
       background-image: url('../../assets/images/en.svg');
+      background-size: cover;
+      width: 31px;
+      height: 21px;
     }
   }
 }
@@ -426,27 +435,17 @@
     }
   }
 
-  img.lang__image {
-    height: auto;
-    width: 50%;
-    overflow: auto;
-  }
-
   div.dropdown_menu {
     position: absolute;
     bottom: -12px;
-    left: -17px;
+    left: -10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     height: 82px;
     width: 51px;
-    color: #FFFFFF;
+    color: rgba(62, 62, 62, 0);
     background-color: rgba(62, 62, 62, 0.5);
-  }
-  span>.header__lang_ru{
-    height: 21px;
-    width: 31px;
   }
 }
